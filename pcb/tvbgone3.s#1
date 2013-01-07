@@ -11576,6 +11576,8 @@ Source: http://www.osram.convergy.de/</description>
 <part name="Q5" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="+" library="ybox2" deviceset="PINHD-1X1" device=""/>
 <part name="-" library="ybox2" deviceset="PINHD-1X1" device=""/>
+<part name="+1" library="ybox2" deviceset="PINHD-1X1" device=""/>
+<part name="+2" library="ybox2" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18077,6 +18079,8 @@ Source: http://www.osram.convergy.de/</description>
 </instance>
 <instance part="+" gate="G$1" x="20.32" y="68.58" rot="R180"/>
 <instance part="-" gate="G$1" x="20.32" y="55.88" rot="R180"/>
+<instance part="+1" gate="G$1" x="78.74" y="43.18" rot="R180"/>
+<instance part="+2" gate="G$1" x="101.6" y="43.18" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -18168,12 +18172,17 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="Q3" gate="G1" pin="E"/>
 </segment>
 <segment>
-<wire x1="86.36" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="50.8" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="48.26" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
 <junction x="86.36" y="50.8"/>
 <pinref part="S1" gate="1" pin="S1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="S1" gate="1" pin="S"/>
+<wire x1="83.82" y1="43.18" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<junction x="83.82" y="50.8"/>
+<pinref part="+1" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="43.18" x2="83.82" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
@@ -18249,12 +18258,17 @@ Source: http://www.osram.convergy.de/</description>
 <segment>
 <wire x1="104.14" y1="60.96" x2="104.14" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="48.26" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="48.26" x2="96.52" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 <junction x="96.52" y="48.26"/>
 <label x="104.14" y="55.88" size="1.778" layer="95" rot="R90"/>
 <pinref part="IC1" gate="G$1" pin="(RESET/DW/ADC0/PCINT5)PB5"/>
 <pinref part="S1" gate="1" pin="P"/>
 <pinref part="S1" gate="1" pin="P1"/>
+<wire x1="99.06" y1="48.26" x2="96.52" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="43.18" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
+<junction x="99.06" y="48.26"/>
+<pinref part="+2" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
